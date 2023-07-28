@@ -914,7 +914,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             [
                              [
                               InlineKeyboardButton('🫨ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=f'https://t.me/MOVIES_PROVIDE2'),
-                          InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/MOVIES_PROVIDE)
+                          InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/MOVIES_PROVIDE")
                        ],[
                           InlineKeyboardButton("😇ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ😇", url="https://t.me/MOVIES_PROVIDE2")
                              ]
@@ -1007,7 +1007,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 [
                  [
                   InlineKeyboardButton('🫨ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=f'https://t.me/MOVIES_PROVIDE2'),
-                          InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/MOVIES_PROVIDE)
+                          InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/MOVIES_PROVIDE")
                        ],[
                           InlineKeyboardButton("😇ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ😇", url="https://t.me/MOVIES_PROVIDE2")
                  ]
