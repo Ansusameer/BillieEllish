@@ -913,11 +913,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         reply_markup=InlineKeyboardMarkup(
                             [
                              [
-                              InlineKeyboardButton('🫨ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=f'https://t.me/MOVIES_PROVIDE2'),
-                          InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/MOVIES_PROVIDE")
+                          InlineKeyboardButton('⸙ ʙᴏᴛ ᴏᴡɴᴇʀ ⸙', url=f'https://t.me/Rexisop99'),
+                          InlineKeyboardButton('💫 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 💫', url="https://t.me/MOVIES_PROVIDE")
                        ],[
-                          InlineKeyboardButton("😇ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ😇", url="https://t.me/MOVIES_PROVIDE2")
-                             ]
+                          InlineKeyboardButton("🍁 ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/MOVIES_PROVIDE2")
+                         ]
                             ]
                         )
                     )
@@ -1006,11 +1006,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                  InlineKeyboardButton('🫨ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=f'https://t.me/MOVIES_PROVIDE2'),
-                          InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url="https://t.me/MOVIES_PROVIDE")
+                          InlineKeyboardButton('⸙ ʙᴏᴛ ᴏᴡɴᴇʀ ⸙', url=f'https://t.me/Rexisop99'),
+                          InlineKeyboardButton('💫 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 💫', url="https://t.me/MOVIES_PROVIDE")
                        ],[
-                          InlineKeyboardButton("😇ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ ɢʀᴏᴜᴘ😇", url="https://t.me/MOVIES_PROVIDE2")
-                 ]
+                          InlineKeyboardButton("🍁 ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/MOVIES_PROVIDE2")
+                         ]
                 ]
             )
         )
