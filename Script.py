@@ -154,7 +154,8 @@ Nᴀᴍᴇ - {}"""
 
 🥁 Buy 'Premium Membership' & Get Movies, Series, etc., In Direct Files Without Any 🔗Links Or Ads...!
 
-Any Doubts or Not Connecting? Contact Me </b>
+💫 Iɴ Oɴʟʏ 40/- Pᴇʀ Mᴏɴᴛʜ.....
+Any Doubts or Not Connecting? Contact Me @Rexisop99 </b>
 """
 
     REQINFO = """
