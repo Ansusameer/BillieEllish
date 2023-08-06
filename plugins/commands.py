@@ -45,14 +45,16 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Jᴏɪɴ Oᴜʀ Mᴀɪɴ Gʀᴏᴜᴘ ⤬', url=f'https://t.me//MOVIES_PROVIDE')
                 ],[
-                    InlineKeyboardButton('🍂ᴜᴘᴅᴀᴛᴇ 🍂', url="https://t.me//MOVIES_PROVIDE"),
-                    InlineKeyboardButton('🫨 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url="https://t.me//MOVIES_PROVIDE2")
+                    InlineKeyboardButton('🍁 ᴜᴘᴅᴀᴛᴇ 🍁', url="https://t.me//MOVIES_PROVIDE"),
+                    InlineKeyboardButton('✨ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ✨', url="https://t.me//MOVIES_PROVIDE2")
                 ],[
-                    InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('💫 ʜᴇʟᴘ 💫', callback_data='help'),
+                    InlineKeyboardButton('⚜️ ᴀʙᴏᴜᴛ ⚜️', callback_data='about')
                 ],[
-                    InlineKeyboardButton('💰 PREMIUM PLAN 💸', callback_data="shortlink_info")
-                  ]]
+                    InlineKeyboardButton('🚩 Jᴀɪ Sʀɪ Rᴀᴍ 🚩', url="https://www.instagram.com/reel/CumTt3hs1bG/?igshid=MzRlODBiNWFlZA==")
+                  ],[
+                    InlineKeyboardButton('💰 Pʀᴇᴍɪᴜᴍ Pʟᴀɴ 💸', callback_data="shortlink_info")
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -93,14 +95,16 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Jᴏɪɴ Oᴜʀ Mᴀɪɴ Gʀᴏᴜᴘ ⤬', url=f'https://t.me//MOVIES_PROVIDE')
                 ],[
-                    InlineKeyboardButton('🍂ᴜᴘᴅᴀᴛᴇ 🍂', url="https://t.me//MOVIES_PROVIDE"),
-                    InlineKeyboardButton('🫨 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url="https://t.me//MOVIES_PROVIDE2")
+                    InlineKeyboardButton('🍁 ᴜᴘᴅᴀᴛᴇ 🍁', url="https://t.me//MOVIES_PROVIDE"),
+                    InlineKeyboardButton('✨ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ✨', url="https://t.me//MOVIES_PROVIDE2")
                 ],[
-                    InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('💫 ʜᴇʟᴘ 💫', callback_data='help'),
+                    InlineKeyboardButton('⚜️ ᴀʙᴏᴜᴛ ⚜️', callback_data='about')
                 ],[
-                    InlineKeyboardButton('💰 PREMIUM PLAN 💸', callback_data="shortlink_info")
-                  ]]
+                    InlineKeyboardButton('🚩 Jᴀɪ Sʀɪ Rᴀᴍ 🚩', url="https://www.instagram.com/reel/CumTt3hs1bG/?igshid=MzRlODBiNWFlZA==")
+                  ],[
+                    InlineKeyboardButton('💰 Pʀᴇᴍɪᴜᴍ Pʟᴀɴ 💸', callback_data="shortlink_info")
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
             photo=random.choice(PICS),
