@@ -51,7 +51,7 @@ async def start(client, message):
                     InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🚩 Jᴀɪ Sʀɪ Rᴀᴍ 🚩', url="https://www.instagram.com/reel/CumTt3hs1bG/?igshid=MzRlODBiNWFlZA==")
+                    InlineKeyboardButton('💰 PREMIUM PLAN 💸', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -99,7 +99,7 @@ async def start(client, message):
                     InlineKeyboardButton('👻 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 ᴀʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🚩 Jᴀɪ Sʀɪ Rᴀᴍ 🚩', url="https://www.instagram.com/reel/CumTt3hs1bG/?igshid=MzRlODBiNWFlZA==")
+                    InlineKeyboardButton('💰 PREMIUM PLAN 💸', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
