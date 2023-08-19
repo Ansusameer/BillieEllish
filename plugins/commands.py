@@ -43,15 +43,17 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⤬ Jᴏɪɴ Oᴜʀ Mᴀɪɴ Gʀᴏᴜᴘ ⤬', url=f'https://t.me//MOVIES_PROVIDE')
                 ],[
-                    InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('🍁 ᴜᴘᴅᴀᴛᴇ 🍁', url="https://t.me//MOVIES_PROVIDE"),
+                    InlineKeyboardButton('✨ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ✨', url="https://t.me//MOVIES_PROVIDE2")
                 ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('💫 ʜᴇʟᴘ 💫', callback_data='help'),
+                    InlineKeyboardButton('⚜️ ᴀʙᴏᴜᴛ ⚜️', callback_data='about')
                 ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    InlineKeyboardButton('🚩 Jᴀɪ Sʀɪ Rᴀᴍ 🚩', url="https://www.instagram.com/reel/CumTt3hs1bG/?igshid=MzRlODBiNWFlZA==")
+                  ],[
+                    InlineKeyboardButton('💰 Pʀᴇᴍɪᴜᴍ Pʟᴀɴ 💸', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAIBYmOkbpQ0brb4z4ggbPv4peTgcDb-AAIlBQACSr5ZVk64AdT0N9vYHgQ") 
@@ -94,15 +96,17 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⤬ Jᴏɪɴ Oᴜʀ Mᴀɪɴ Gʀᴏᴜᴘ ⤬', url=f'https://t.me//MOVIES_PROVIDE')
                 ],[
-                    InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('🍁 ᴜᴘᴅᴀᴛᴇ 🍁', url="https://t.me//MOVIES_PROVIDE"),
+                    InlineKeyboardButton('✨ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ✨', url="https://t.me//MOVIES_PROVIDE2")
                 ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('💫 ʜᴇʟᴘ 💫', callback_data='help'),
+                    InlineKeyboardButton('⚜️ ᴀʙᴏᴜᴛ ⚜️', callback_data='about')
                 ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    InlineKeyboardButton('🚩 Jᴀɪ Sʀɪ Rᴀᴍ 🚩', url="https://www.instagram.com/reel/CumTt3hs1bG/?igshid=MzRlODBiNWFlZA==")
+                  ],[
+                    InlineKeyboardButton('💰 Pʀᴇᴍɪᴜᴍ Pʟᴀɴ 💸', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
