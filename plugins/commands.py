@@ -322,7 +322,7 @@ async def start(client, message):
                     InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/MOVIES_PROVIDE/11')
                                          ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    text="<b>‼️ NOTICE ‼️ \n\n ☞ Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғʏᴇᴅ..\n ☞ Pʟᴇᴀsᴇ Vᴇʀɪғʏ Fᴏʀ Tᴀᴋᴇ Uɴʟɪᴍɪᴛᴇᴅ Fɪʟᴇs Fᴏʀ Tᴏᴅᴀʏ..!\n ☞ Kɪɴᴅʟʏ Vᴇʀɪғʏ ᴛᴏ Cᴏɴᴛɪɴᴜᴇ !</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -387,7 +387,7 @@ async def start(client, message):
                     InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/MOVIES_PROVIDE/11')
                                          ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    text="<b>‼️ NOTICE ‼️ \n\n ☞ Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғʏᴇᴅ..\n ☞ Pʟᴇᴀsᴇ Vᴇʀɪғʏ Fᴏʀ Tᴀᴋᴇ Uɴʟɪᴍɪᴛᴇᴅ Fɪʟᴇs Fᴏʀ Tᴏᴅᴀʏ..!\n ☞ Kɪɴᴅʟʏ Vᴇʀɪғʏ ᴛᴏ Cᴏɴᴛɪɴᴜᴇ !</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -448,7 +448,7 @@ async def start(client, message):
                     InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/MOVIES_PROVIDE/11')
                                          ]]
         await message.reply_text(
-            text="<b>You are not verified !\nKindly verify to continue !</b>",
+            text="<b>‼️ NOTICE ‼️ \n\n ☞ Yᴏᴜ Aʀᴇ Nᴏᴛ Vᴇʀɪғʏᴇᴅ..\n ☞ Pʟᴇᴀsᴇ Vᴇʀɪғʏ Fᴏʀ Tᴀᴋᴇ Uɴʟɪᴍɪᴛᴇᴅ Fɪʟᴇs Fᴏʀ Tᴏᴅᴀʏ..!\n ☞ Kɪɴᴅʟʏ Vᴇʀɪғʏ ᴛᴏ Cᴏɴᴛɪɴᴜᴇ !</b>",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
