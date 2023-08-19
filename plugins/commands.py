@@ -157,10 +157,10 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('⸙ ʙᴏᴛ ᴏᴡɴᴇʀ ⸙', url=f'https://t.me/Rexisop99'),
+                          InlineKeyboardButton('💫 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 💫', url="https://t.me/MOVIES_PROVIDE")
                        ],[
-                          InlineKeyboardButton("Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ", url="t.me/TeamHMT_Movies")
+                          InlineKeyboardButton("🍁 ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/MOVIES_PROVIDE2")
                          ]
                         ]
                     )
@@ -176,10 +176,10 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('⸙ ʙᴏᴛ ᴏᴡɴᴇʀ ⸙', url=f'https://t.me/Rexisop99'),
+                          InlineKeyboardButton('💫 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 💫', url="https://t.me/MOVIES_PROVIDE")
                        ],[
-                          InlineKeyboardButton("Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ", url="t.me/TeamHMT_Movies")
+                          InlineKeyboardButton("🍁 ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/MOVIES_PROVIDE2")
                          ]
                         ]
                     )
@@ -333,10 +333,10 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                   ],[
-                      InlineKeyboardButton("Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ", url="t.me/TeamHMT_Movies")
+                      InlineKeyboardButton('⸙ ʙᴏᴛ ᴏᴡɴᴇʀ ⸙', url=f'https://t.me/Rexisop99'),
+                          InlineKeyboardButton('💫 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 💫', url="https://t.me/MOVIES_PROVIDE")
+                       ],[
+                          InlineKeyboardButton("🍁 ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/MOVIES_PROVIDE2")
                      ]
                     ]
                 )
@@ -395,10 +395,10 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                   ],[
-                      InlineKeyboardButton("Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ", url="t.me/TeamHMT_Movies")
+                      InlineKeyboardButton('⸙ ʙᴏᴛ ᴏᴡɴᴇʀ ⸙', url=f'https://t.me/Rexisop99'),
+                          InlineKeyboardButton('💫 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 💫', url="https://t.me/MOVIES_PROVIDE")
+                       ],[
+                          InlineKeyboardButton("🍁 ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/MOVIES_PROVIDE2")
                      ]
                     ]
                 )
@@ -455,10 +455,10 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-           ],[
-              InlineKeyboardButton("Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ", url="t.me/TeamHMT_Movies")
+              InlineKeyboardButton('⸙ ʙᴏᴛ ᴏᴡɴᴇʀ ⸙', url=f'https://t.me/Rexisop99'),
+                          InlineKeyboardButton('💫 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 💫', url="https://t.me/MOVIES_PROVIDE")
+                       ],[
+                          InlineKeyboardButton("🍁 ᴍᴏᴠɪᴇ ʀᴇϙᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🍁", url="https://t.me/MOVIES_PROVIDE2")
              ]
             ]
         )
