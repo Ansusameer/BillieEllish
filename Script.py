@@ -185,7 +185,7 @@ Any Doubts or Not Connecting? Contact Me <a href='https://t.me/XAYOONARA'>𝑿�
     CAPTION = """
  <b>📂<a href="https://telegram.me/MyFliix_2"><b><i>{file_name}</i></b></a>\n━━━━━━━━━━━━━━━━━━━━━━━\n
 
- <b><u>☞</u></b> [𝙈𝙔𝙁𝙇𝙞𝙞𝙓](https://t.me/myfliix_2)"""
+ <b>☞</b> [𝙈𝙔𝙁𝙇𝙞𝙞𝙓](https://t.me/myfliix_2)"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
