@@ -49,7 +49,7 @@ async def index_files(bot, query):
 # ... (other functions remain the same)
 
 @app.on_message((filters.forwarded | (filters.regex("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")) & filters.text ) & filters.private & filters.incoming)
-async def send_for_index(_, message):
+async def send_for_index(_, message)
     # ... (remaining code remains the same)
     
 @app.on_message(filters.command('setskip') & filters.user(ADMINS))
