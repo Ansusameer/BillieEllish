@@ -11,8 +11,6 @@ def is_enabled(value, default):
     else:
         return default
 
-# Bot information
-SESSION = environ.get('SESSION', 'Media_search')
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '1736204'))
 API_HASH = environ.get('API_HASH', '890d40e0f91a4de32dec2965444b2cbe')
@@ -22,10 +20,10 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '6532068272:AAHSIJjtPUGOqeoeIPqUOulEa0gDH7y
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://te.legra.ph/file/e2b658b220739f984b32a.jpg https://te.legra.ph/file/e2b658b220739f984b32a.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/a27dc8fe434e6b846b0f8.jpg")
+PICS = (environ.get('PICS', 'https://te.legra.ph/file/4ba1cee40673773867d6c.jpg https://te.legra.ph/file/affa04a4727319b4f39e4.jpg https://te.legra.ph/file/61665414220a66fe5c816.jpg ')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/e709716b0b99ed944a533.jpg")
 MELCOW_PIC = environ.get("MELCOW_PIC", "https://graph.org/file/75d4fcc66598ea1ef4941.jpg")
-SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/2d68d2c0fbf9385d48d70.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1058015838').split()]
