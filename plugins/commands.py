@@ -44,9 +44,6 @@ async def start(client, message):
             InlineKeyboardButton('⚜ Updates', url='https://telegram.me/HeroFlix')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAEKHAJk504563prYQMfO9NO51-p7xo1VAACgAMAAuMV0FVUQzIP1OspYjAE") 
-        await asyncio.sleep(1)
-        await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -240,18 +237,18 @@ async def start(client, message):
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", True)
         else:
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", False)
-        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n📂 ʟɪɴᴋ ➠ : {g}</b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n♻️ ʟɪɴᴋ ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📁', url=g)
                     ], [
-                        InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=f'https://telegram.me/HeroFlix/2198')
+                        InlineKeyboardButton('❓ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ❓', url=f'https://telegram.me/HeroFlix/2198')
                     ]
                 ]
             )
         )
-        await asyncio.sleep(300)
-        await k.edit("<b>Your message is successfully deleted!!!</b>")
+        await asyncio.sleep(600)
+        await k.delete
         return
         
     
@@ -261,18 +258,18 @@ async def start(client, message):
         files_ = await get_file_details(file_id)
         files = files_[0]
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-        k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}</b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=user,text=f"<b>🔆 Fɪʟᴇ ➠ <code>{files.file_name}</code> \n\n🪀 Fɪʟᴇ Sɪᴢᴇ ➠ {get_size(files.file_size)}\n\n🎭 ʟɪɴᴋ ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📂 ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)
+                        InlineKeyboardButton('♻️ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ♻️', url=g)
                     ], [
-                        InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=f'https://telegram.me/HeroFlix/2198')
+                        InlineKeyboardButton('❓ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ❓', url=f'https://telegram.me/HeroFlix/2198')
                     ]
                 ]
             )
         )
         await asyncio.sleep(600)
-        await k.edit("<b>Your message is successfully deleted!!!</b>")
+        await k.delete
         return
         
     elif data.startswith("all"):
@@ -335,18 +332,18 @@ async def start(client, message):
             files_ = await get_file_details(file_id)
             files = files_[0]
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}</b>", reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>🔆 Fɪʟᴇ ➠ <code>{files.file_name}</code> \n\n🪀 Fɪʟᴇ Sɪᴢᴇ ➠ {get_size(files.file_size)}\n\n🎭 ʟɪɴᴋ ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('📂 ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)
+                            InlineKeyboardButton('♻️ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ♻️', url=g)
                         ], [
-                            InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=f'https://telegram.me/HeroFlix/2198')
+                            InlineKeyboardButton('❓ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ❓', url=f'https://telegram.me/HeroFlix/2198')
                         ]
                     ]
                 )
             )
             await asyncio.sleep(1200)
-            await k.edit("<b>Your message is successfully deleted!!!</b>")
+            await k.delete
             return
     user = message.from_user.id
     files_ = await get_file_details(file_id)           
