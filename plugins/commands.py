@@ -247,7 +247,7 @@ async def start(client, message):
                 ]
             )
         )
-        await asyncio.sleep(600)
+        await asyncio.sleep(900)
         await k.delete
         return
         
@@ -268,7 +268,7 @@ async def start(client, message):
                 ]
             )
         )
-        await asyncio.sleep(600)
+        await asyncio.sleep(900)
         await k.delete
         return
         
@@ -342,7 +342,7 @@ async def start(client, message):
                     ]
                 )
             )
-            await asyncio.sleep(1200)
+            await asyncio.sleep(900)
             await k.delete
             return
     user = message.from_user.id
