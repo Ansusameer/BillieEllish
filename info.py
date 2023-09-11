@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '27096551'))
 API_HASH = environ.get('API_HASH', '8600379efa072b446f9bc81da4f40786')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6007401862:AAExO9f9TRt08N8Rs_-jRgbqN5rMuebjTh0')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6007401862:AAFPjEW7r-Km1qASHZf3vipL4bJ9cvnu77Y')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -26,9 +26,9 @@ MELCOW_PIC = environ.get("MELCOW_PIC", "https://graph.org/file/75d4fcc66598ea1ef
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/2d68d2c0fbf9385d48d70.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1058015838').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1058015838 6012123382').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001638006524').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1058015838').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1058015838 6012123382').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL', '-1001521700370')
