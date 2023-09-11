@@ -47,7 +47,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "jennie")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'jennie')
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'eaysky.in')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '8abee50e122616d233cb904039c4fe594fe8574c')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'easysky.in')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '8abee50e122616d233cb904039c4fe594fe8574c')
