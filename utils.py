@@ -500,10 +500,11 @@ async def get_shortlink(chat_id, link, second=False):
         # if parsed_data["status"] == "success":
         #   return parsed_data["link"]
     #method 2
-       url = f'https://easysky.in/api'
-    params = {'api': '12d1df0a0f8e8cd03eb7d99bb79c51fcab5dac84',
-              'url': link,
-              }
+        url = f'https://{URL}/easy_api'
+        params = {
+            "key": API,
+            "link": link,
+        }
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
@@ -658,10 +659,10 @@ async def get_verify_shorted_link(link):
             logger.error(e)
             return f'https://{URL}/shortLink?token={API}&format=json&link={link}'
     else:
-        url = f'https://easysky.in/api'
-    params = {'api': '12d1df0a0f8e8cd03eb7d99bb79c51fcab5dac84',
-              'url': link,
-              }
+        url = f'https://{URL}/api'
+        params = {'api': API,
+                  'url': link,
+                  }
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
@@ -771,7 +772,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Kgashok04")
+                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/heroflix")
                                 ]
                             ]
                         )
@@ -814,7 +815,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                         InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                         InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                     ],[
-                        InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Kgashok04")
+                        InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/heroflix")
                         ]
                     ]
                 )
