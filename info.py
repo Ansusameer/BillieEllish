@@ -16,7 +16,7 @@ API_ID = int(environ.get('API_ID', '27096551'))
 API_HASH = environ.get('API_HASH', '8600379efa072b446f9bc81da4f40786')
 BOT_TOKEN = environ.get('BOT_TOKEN', '6007401862:AAFPjEW7r-Km1qASHZf3vipL4bJ9cvnu77Y')
 
-# Bot settings
+DWLD = environ.get("DWLD", 'HeroFlix/2198')
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
