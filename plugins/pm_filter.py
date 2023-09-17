@@ -13,7 +13,7 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, TUTORIAL, REQST_CHANNEL, IS_TUTORIAL, LANGUAGES, SEASONS, SUPPORT_CHAT, PREMIUM_USER
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, TUTORIAL, REQST_CHANNEL, IS_TUTORIAL, LANGUAGES, SEASONS, SUPPORT_CHAT, PREMIUM_USER, DWLD
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -68,22 +68,6 @@ async def give_filter(client, message):
             return await message.reply_text(
          text=f"<b>ʏᴏᴜ ᴄᴀɴ'ᴛ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ\nᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/HeroFlix/1293")]])
-    )
-
-@Client.on_message(filters.private & filters.text & filters.incoming)
-async def pm_text(bot, message):
-    content = message.text
-    user = message.from_user.first_name
-    user_id = message.from_user.id
-    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-    if user_id in ADMINS: return # ignore admins
-    await message.reply_text(
-         text=f"<b>ʏᴏᴜ ᴄᴀɴ'ᴛ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ\nᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/HeroFlix/1293")]])
-    )
-    await bot.send_message(
-        chat_id=LOG_CHANNEL,
-        text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
     )
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -244,7 +228,6 @@ async def next_page(bot, query):
         pass
     await query.answer()
 
-
 @Client.on_callback_query(filters.regex(r"^spol"))
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
@@ -275,8 +258,6 @@ async def advantage_spoll_choker(bot, query):
                 k = await query.message.edit(script.MVE_NT_FND)
                 await asyncio.sleep(60)
                 await k.delete()
-
-#languages
 
 @Client.on_callback_query(filters.regex(r"^languages#"))
 async def languages_cb_handler(client: Client, query: CallbackQuery):
@@ -324,7 +305,6 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
 
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
     
-
 @Client.on_callback_query(filters.regex(r"^fl#"))
 async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     _, lang, key = query.data.split("#")
@@ -471,8 +451,6 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     
     #     await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
     
-    
-    
 @Client.on_callback_query(filters.regex(r"^seasons#"))
 async def seasons_cb_handler(client: Client, query: CallbackQuery):
 
@@ -520,7 +498,6 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
     btn.append([InlineKeyboardButton(text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭", callback_data=f"next_{req}_{key}_{offset}")])
 
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
-
 
 @Client.on_callback_query(filters.regex(r"^fs#"))
 async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
@@ -1617,11 +1594,10 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_sticker(sticker="CAACAgQAAxkBAAEKOkhk9yRcCGGpPDc-D9bxkSTjx2XiDAAC7g0AAn2mwVC98nx2ic38GjAE")
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in","upload", "series", "full", "horror", "thriller", "dub", "mystery", "anime", "file" "movie",  "film",  "netflix",  "episode",  "dubbed",  "link",  "subtitles"]
+            removes = ["in","upload", "series", "full", "horror", "thriller", "webseries", "dub", "mystery", "anime", "file" "movie",  "film",  "netflix",  "episode",  "dubbed",  "link",  "subtitles"]
             for x in find:
                 # if x == "in" or x == "upload" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
@@ -1648,7 +1624,6 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker(sticker="CAACAgQAAxkBAAEKOkhk9yRcCGGpPDc-D9bxkSTjx2XiDAAC7g0AAn2mwVC98nx2ic38GjAE")
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
@@ -1837,7 +1812,7 @@ async def auto_filter(client, msg, spoll=False):
     await m.delete()
     try:
         if settings['auto_delete']:
-            await asyncio.sleep(600)
+            await asyncio.sleep(900)
             await fuk.delete()
             await message.delete()
     except KeyError:
@@ -1856,7 +1831,7 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in","upload", "series", "full", "horror", "thriller", "dub", "mystery", "anime", "file" "movie",  "film",  "netflix",  "episode",  "dubbed",  "link",  "subtitles"]
+    removes = ["in","upload", "series", "full", "horror", "thriller", "dub", "webseries", "mystery", "anime", "file" "movie",  "film",  "netflix",  "episode",  "dubbed",  "link",  "subtitles"]
     for x in find:
         if x in removes:
             continue
