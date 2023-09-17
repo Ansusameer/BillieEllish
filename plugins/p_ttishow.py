@@ -21,10 +21,9 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-            InlineKeyboardButton('📲 Support 📲', url=f"https://telegram.me/{SUPPORT_CHAT}"),
-            InlineKeyboardButton('🔆 Updates 🔆', url='https://telegram.me/HeroFlix')
-        ]]
-        reply_markup=InlineKeyboardMarkup(buttons)
+                InlineKeyboardButton('📲 Support 📲', url=f'https://telegram.me/{SUPPORT_CHAT}')
+            ]]
+            reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
                 text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
                 reply_markup=reply_markup,
