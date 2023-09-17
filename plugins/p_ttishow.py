@@ -1,7 +1,7 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS, MELCOW_PIC, CHNL_LNK, GRP_LNK
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS, MELCOW_PIC, CHNL_LNK, GRP_LNK, DWLD
 from database.users_chats_db import db
 from database.ia_filterdb import Media
 from utils import get_size, temp, get_settings
@@ -21,9 +21,10 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('📲 Support 📲', url=f'https://telegram.me/HEROFEEDBOT')
-            ]]
-            reply_markup=InlineKeyboardMarkup(buttons)
+            InlineKeyboardButton('📲 Support 📲', url=f"https://telegram.me/{SUPPORT_CHAT}"),
+            InlineKeyboardButton('🔆 Updates 🔆', url='https://telegram.me/HeroFlix')
+        ]]
+        reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
                 text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
                 reply_markup=reply_markup,
@@ -36,8 +37,9 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-                    InlineKeyboardButton("🔆彡[ HEROFLiX ]彡🔆", url="https://telegram.me/heroflix")
-                  ]]
+            InlineKeyboardButton('📲 Support 📲', url=f"https://telegram.me/{SUPPORT_CHAT}"),
+            InlineKeyboardButton('🔆 Updates 🔆', url='https://telegram.me/HeroFlix')
+        ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
             text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
@@ -56,7 +58,7 @@ async def save_group(bot, message):
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
-                                                                           InlineKeyboardButton("🔆彡[ HEROFLiX ]彡🔆", url="https://telegram.me/heroflix")
+                                                                           InlineKeyboardButton("❓How To Download❓", url=f'https://telegram.me/{DWLD}')
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
