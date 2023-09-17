@@ -8,7 +8,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, DWLD, TUTORIAL, IS_TUTORIAL, PREMIUM_USER
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial
 from database.connections_mdb import active_connection
 # from plugins.pm_filter import ENABLE_SHORTLINK
@@ -24,7 +24,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('❓How To Use Me❓', url='https://telegram.me/heroflix/2198')
+                InlineKeyboardButton('❓How To Use Me❓', url=f'https://telegram.me/{DWLD}')
             ]
                ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -40,7 +40,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('❓How To Use Me', url=f'https://telegram.me/heroflix/2198'),
+            InlineKeyboardButton('❓How To Use Me', url=f'https://telegram.me/{DWLD}'),
             InlineKeyboardButton('⚜ Updates', url='https://telegram.me/HeroFlix')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -81,7 +81,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('❓How To Use Me', url='https://telegram.me/HeroFlix/2198'),
+            InlineKeyboardButton('❓How To Use Me', url=f'https://telegram.me/{DWLD}'),
             InlineKeyboardButton('⚜ Updates', url='https://telegram.me/HeroFlix')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
