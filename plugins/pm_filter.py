@@ -1597,7 +1597,7 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in","upload", "series", "full", "horror", "thriller", "webseries", "dub", "mystery", "anime", "file" "movie",  "film",  "netflix",  "episode",  "dubbed",  "link",  "subtitles"]
+            removes = ["in","upload", "s1", "series", "full", "horror", "thriller", "webseries", "dub", "mystery", "anime", "file" "movie",  "film",  "netflix",  "episode",  "dubbed",  "link",  "subtitles"]
             for x in find:
                 # if x == "in" or x == "upload" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
@@ -1607,7 +1607,15 @@ async def auto_filter(client, msg, spoll=False):
                     search = search + x + " "
             search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|bro|bruh|broh|helo|that|find|dubbed|link|venum|iruka|pannunga|pannungga|anuppunga|anupunga|anuppungga|anupungga|film|undo|kitti|kitty|tharu|kittumo|kittum|movie|any(one)|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
             search = re.sub(r"\s+", " ", search).strip()
+            search = search.replace("season 1", "S01")
             search = search.replace("-", " ")
+            search = search.replace("season 2", "S02")
+            search = search.replace("season 3", "S03")
+            search = search.replace("season 4", "S04")
+            search = search.replace("season 5", "S05")
+            search = search.replace("season 6", "S06")
+            search = search.replace("season 7", "S07")
+            search = search.replace("season 8", "S08")
             search = search.replace(":","")
             files, offset, total_results = await get_search_results(message.chat.id ,search, offset=0, filter=True)
             settings = await get_settings(message.chat.id)
