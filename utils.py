@@ -500,7 +500,7 @@ async def get_shortlink(chat_id, link, second=False):
         # if parsed_data["status"] == "success":
         #   return parsed_data["link"]
     #method 2
-        url = f'https://{URL}/easy_api'
+        url = f'https://{URL}/api'
         params = {
             "key": API,
             "link": link,
