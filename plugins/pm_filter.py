@@ -183,14 +183,11 @@ async def next_page(bot, query):
     # btn.insert(0, [
     #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
     # ])
-    cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
-    time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
-    remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
     if settings["button"]:
-        cap = f"<b>🔆 Your Search Results {search}</b>"
+        cap = f"<b>🔆 sᴇᴀʀᴄʜ Rᴇꜱᴜʟᴛꜱ Fᴏʀ '{search}'</b>"
     else:
         # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-        cap = f"<b>🔆 Your Search Results {search}\n\n</b>"
+        cap = f"<b>🔆 sᴇᴀʀᴄʜ Rᴇꜱᴜʟᴛꜱ Fᴏʀ '{search}'</b>"
         for file in files:
             cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
@@ -222,7 +219,6 @@ async def advantage_spoll_choker(bot, query):
             k = await query.message.edit('<b><i>💢 404 Error / No Results❗\n\n🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/1371">Click Here</a>]\n🗨 Please Follow Request Tips\n🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/894">Click Here</a>]</i></b>')
             await asyncio.sleep(60)
             await k.delete()
-
 
 @Client.on_callback_query(filters.regex(r"^languages#"))
 async def languages_cb_handler(client: Client, query: CallbackQuery):
