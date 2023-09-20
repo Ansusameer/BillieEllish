@@ -211,7 +211,7 @@ async def advantage_spoll_choker(bot, query):
     await query.answer("Checking, Please Wait ♻️ \n\n[ Don't Spam - Just Wait! ]", show_alert=True)
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
-        files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
+        files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
         if files:
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
