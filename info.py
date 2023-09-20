@@ -46,7 +46,7 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jennie:jennie@jennie.t
 DATABASE_NAME = environ.get('DATABASE_NAME', "jennie")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'jennie')
 # Others
-VERIFY = bool(environ.get('VERIFY', False))
+VERIFY = bool(environ.get('VERIFY', True))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
 SHORTLINK_API = environ.get('SHORTLINK_API', '6f2c421d6228f300c03f59a4ea57e26dc2800466')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'tnshort.net')
