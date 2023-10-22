@@ -71,7 +71,7 @@ async def start(client, message):
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
                 btn.append([InlineKeyboardButton("🔆彡⟨ HEROFLiX ⟩彡🔆", url=f"https://telegram.me/heroflix")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("♻ Try Again ♻", url=f"https://telegram.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("🔆彡⟨ HEROFLiX ⟩彡🔆", url=f"https://telegram.me/heroflix")])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**🔆 Join Our Main Channel & Then Request Again in Group ♻ \n\n🔆 हमारे मैन चैनल से जुड़ें और फिर ग्रुप में दोबारा रिक्वेस्ट करें ♻**",
