@@ -1556,9 +1556,9 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in", "upload", "series", "full", "horror", "thriller", "webseries", "dub", "mystery", "anime", "file", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+            removes = ["in", "series", "full", "horror", "thriller", "webseries", "dub", "mystery", "anime", "file", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
             for x in find:
-                # if x == "in" or x == "upload" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
+                # if x == "in" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
                 if x in removes:
                     continue
@@ -1787,7 +1787,7 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in", "upload", "series", "download", "full", "horror", "thriller", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+    removes = ["in", "series", "download", "full", "horror", "thriller", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
     for x in find:
         if x in removes:
             continue
