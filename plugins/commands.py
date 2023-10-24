@@ -321,6 +321,7 @@ async def start(client, message):
         await k.edit_text("<b>File Deleted!</b>")
         return    
         
+
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
