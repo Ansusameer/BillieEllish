@@ -318,13 +318,13 @@ async def start(client, message):
                 )
             )
             filesarr.append(msg)
-        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
+        await k.edit_text("<b>File Deleted!</b>")
         return    
         
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
-            await message.reply_text(text="<b>Please Search Again in Group</b>")
+            await message.reply_text(text="<b>Link Expired, Search Again in Group!</b>")
         else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
