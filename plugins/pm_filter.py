@@ -195,10 +195,10 @@ async def next_page(bot, query):
     #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
     # ])
     if settings["button"]:
-        cap = f"<b>🔆 sᴇᴀʀᴄʜ Rᴇꜱᴜʟᴛꜱ Fᴏʀ '{search}'\n\n</b>"
+        cap = f"<b>🔆 Your Search Results ‛{search}’👇\n\nSelect A Link & Press Start!\n\n</b>"
     else:
         # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-        cap = f"<b>🔆 sᴇᴀʀᴄʜ Rᴇꜱᴜʟᴛꜱ Fᴏʀ '{search}'\n\n</b>"
+        cap = f"<b>🔆 Your Search Results ‛{search}’👇\n\nSelect A Link & Press Start!\n\n</b>"
         for file in files:
             cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
@@ -1725,10 +1725,10 @@ async def auto_filter(client, msg, spoll=False):
     #     )
     # else:
     if settings["button"]:
-        cap = f"<b>🔆 Your Search Results</b> ‛{search}’👇\n\n</b>"
+        cap = f"<b>🔆 Your Search Results ‛{search}’👇\n\nSelect A Link & Press Start!\n\n</b>"
     else:
         # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-        cap = f"🔆 Your Search Results</b> ‛{search}’👇\n\n</b>"
+        cap = f"<b>🔆 Your Search Results ‛{search}’👇\n\nSelect A Link & Press Start!\n\n</b>"
         for file in files:
             cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
