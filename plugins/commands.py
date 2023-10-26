@@ -258,7 +258,7 @@ async def start(client, message):
         files_ = await get_file_details(file_id)
         files = files_[0]
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-        k = await client.send_message(chat_id=user,text=f"<b>🔆 Fɪʟᴇ ➠ <code>{files.file_name}</code> \n\n🪀 Fɪʟᴇ Sɪᴢᴇ ➠ {get_size(files.file_size)}\n\n🎭 ʟɪɴᴋ ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=user,text=f"<b>📙 File ➠ [ {get_size(files.file_size)} ]</b> <code>{files.file_name}</code> \n\n<b>📗 Download Link ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton('♻️ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ♻️', url=g)
@@ -332,7 +332,7 @@ async def start(client, message):
             files_ = await get_file_details(file_id)
             files = files_[0]
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>🔆 Fɪʟᴇ ➠ <code>{files.file_name}</code> \n\n🪀 Fɪʟᴇ Sɪᴢᴇ ➠ {get_size(files.file_size)}\n\n🎭 ʟɪɴᴋ ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📙 File ➠ [ {get_size(files.file_size)} ]</b> <code>{files.file_name}</code> \n\n<b>📗 Download Link ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton('♻️ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ♻️', url=g)
