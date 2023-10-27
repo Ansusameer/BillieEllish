@@ -1855,7 +1855,7 @@ async def advantage_spell_chok(client, msg):
             callback_data=f"spolling#{reqstr1}#{k}",
         )
     ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="×××× ⟨ Close ⟩ ××××", callback_data=f'spol#{reqstr1}#close_spellcheck')])
+    btn.append([InlineKeyboardButton(text="×××× ⟨ Close ⟩ ××××", callback_data='close_data')])
     k = await msg.reply("<b>❗Enter Correct Name👇</b> \n<b>❗सही नाम दर्ज करें👇</b>",
                      reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(60)
