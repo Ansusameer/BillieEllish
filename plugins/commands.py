@@ -258,7 +258,7 @@ async def start(client, message):
         files_ = await get_file_details(file_id)
         files = files_[0]
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-        k = await client.send_message(chat_id=user,text=f"<b>📙 File ➠ [ {get_size(files.file_size)} ]</b> <code>{files.file_name}</code> \n\n<b>📗 Download Link ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=user,text=f"<b>📙 File ➠ [ {get_size(files.file_size)} ]</b> <a href="https://telegram.me/HEROFLiX"><b><i>{files.file_name}</i></b></a> \n\n<b>📗 Download Link ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton('♻️ Download Link ♻️', url=g)
