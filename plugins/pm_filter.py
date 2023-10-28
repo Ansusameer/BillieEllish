@@ -1813,7 +1813,7 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = query.replace(" ", "+")
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/1371">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://t.me/HEROFLiX/894">Click Here</a>]</i></b>')
+        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://t.me/HEROFLiX/12">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://t.me/HEROFLiX/11">Click Here</a>]</i></b>')
         await asyncio.sleep(60)
         await k.delete()    
         return
@@ -1844,7 +1844,7 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = query.replace(" ", "+")
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/1371">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://t.me/HEROFLiX/894">Click Here</a>]</i></b>')
+        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://t.me/HEROFLiX/12">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/11">Click Here</a>]</i></b>')
         await asyncio.sleep(60)
         await k.delete()    
         return
