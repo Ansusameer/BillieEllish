@@ -44,21 +44,21 @@ Nᴀᴍᴇ - {}"""
 
     I_CUDNT = """<b><i>💢 404 Error / No Results❗
 
-🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/1371">Click Here</a>]
+🚫 The Reason❓[<a href="https://t.me/HEROFLiX/12">Click Here</a>]
 🗨 Please Follow Request Tips
-🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/894">Click Here</a>]</i></b>"""
+🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/11">Click Here</a>]</i></b>"""
 
     I_CUD_NT = """<b><i>💢 404 Error / No Results❗
 
-🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/1371">Click Here</a>]
+🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/12">Click Here</a>]
 🗨 Please Follow Request Tips
-🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/894">Click Here</a>]</i></b>"""
+🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/11">Click Here</a>]</i></b>"""
 
     MVE_NT_FND = """<b><i>💢 404 Error / No Results❗
 
-🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/1371">Click Here</a>]
+🚫 The Reason❓[<a href="https://telegram.me/HeroFlix/12">Click Here</a>]
 🗨 Please Follow Request Tips
-🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/894">Click Here</a>]</i></b>"""
+🔆 Request Tips › [<a href="https://telegram.me/HEROFLiX/11">Click Here</a>]</i></b>"""
 
     TOP_ALRT_MSG = """🔆彡[ @HEROFLiX ]彡🔆"""
 
