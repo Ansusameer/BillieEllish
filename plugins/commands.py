@@ -240,9 +240,9 @@ async def start(client, message):
         k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n♻️ ʟɪɴᴋ ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('♻️ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ♻️', url=g)
+                        InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                     ], [
-                        InlineKeyboardButton('❓ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ❓', url=f'https://telegram.me/{DWLD}')
+                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://telegram.me/{DWLD}')
                     ]
                 ]
             )
@@ -261,9 +261,9 @@ async def start(client, message):
         k = await client.send_message(chat_id=user,text=f"<b>📙 File ➠ [ {get_size(files.file_size)} ]</b> <code>{files.file_name}</code> \n\n<b>📗 Download Link ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('♻️ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ♻️', url=g)
+                        InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                     ], [
-                        InlineKeyboardButton('❓ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ❓', url=f'https://telegram.me/{DWLD}')
+                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://telegram.me/{DWLD}')
                     ]
                 ]
             )
@@ -335,9 +335,9 @@ async def start(client, message):
             k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📙 File ➠ [ {get_size(files.file_size)} ]</b> <code>{files.file_name}</code> \n\n<b>📗 Download Link ➠ {g}</b>", reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('♻️ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ♻️', url=g)
+                            InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                         ], [
-                            InlineKeyboardButton('❓ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ❓', url=f"https://telegram.me/{DWLD}")
+                            InlineKeyboardButton('❓ How To Download ❓', url=f"https://telegram.me/{DWLD}")
                         ]
                     ]
                 )
