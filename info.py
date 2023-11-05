@@ -18,7 +18,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '6007401862:AAFPjEW7r-Km1qASHZf3vipL4bJ9cvn
 
 DWLD = environ.get("DWLD", 'HeroFlixx/8')
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 PICS = (environ.get('PICS', 'https://te.legra.ph/file/4ba1cee40673773867d6c.jpg https://te.legra.ph/file/affa04a4727319b4f39e4.jpg https://te.legra.ph/file/61665414220a66fe5c816.jpg ')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/e709716b0b99ed944a533.jpg")
