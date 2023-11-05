@@ -1567,7 +1567,7 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in", "series", "full", "horror", "thriller", "webseries", "hd", "hollywood", "bollywood", "dub", "mystery", "anime", "file", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+            removes = ["in", "series", "full", "horror", "thriller", "webseries", "hd", "hollywood", "and, "&", "bollywood", "dub", "mystery", "anime", "file", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
             for x in find:
                 # if x == "in" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
@@ -1575,7 +1575,7 @@ async def auto_filter(client, msg, spoll=False):
                     continue
                 else:
                     search = search + x + " "
-            search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|web\sseries|download|dubbed|link|film|movie|any(one)|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
+            search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|gib)(\sme)?)|movie(s)?|new|latest|web\sseries|download|dubbed|link|film|movie|any(one)|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
             search = re.sub(r"\s+", " ", search).strip()
             search = search.replace("-", " ")
             search = search.replace(":", "")
@@ -1798,13 +1798,13 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in", "series", "download", "full", "horror", "hd", "thriller", "hollywood", "bollywood", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+    removes = ["in", "series", "download", "full", "horror", "hd", "thriller", "and, "&", "hollywood", "bollywood", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
     for x in find:
         if x in removes:
             continue
         else:
             query = query + x + " "
-    query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|web\sseries|movie(s)?|new|latest|find|dubbed|link|movie|any(one)|with\ssubtitle(s)?)", "", query, flags=re.IGNORECASE)
+    query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|gib)(\sme)?)|web\sseries|movie(s)?|new|latest|find|dubbed|link|movie|any(one)|with\ssubtitle(s)?)", "", query, flags=re.IGNORECASE)
     query = re.sub(r"\s+", " ", query).strip() + "movie"
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
