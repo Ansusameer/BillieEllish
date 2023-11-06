@@ -42,23 +42,26 @@ Nᴀᴍᴇ - {}"""
     CUDNT_FND = """<b>❗Enter Correct Name👇</b>
 <b>❗सही नाम दर्ज करें👇</b>"""
 
-    I_CUDNT = """<b><i>💢 404 Error / No Results❗
+    I_CUDNT = """<b><i>💢 Sorry - It's Not Available❗️
 
-🚫 The Reason❓[<a href="https://telegram.me/HeroFlixx/3">Click Here</a>]
-🗨 Please Follow Request Tips
-🔆 Request Tips › [<a href="https://telegram.me/HeroFlixx/2">Click Here</a>]</i></b>"""
+⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]
+🗨 Please Follow Request Tips!!!
+⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>"""
 
-    I_CUD_NT = """<b><i>💢 404 Error / No Results❗
 
-🚫 The Reason❓[<a href="https://telegram.me/HeroFlixx/3">Click Here</a>]
-🗨 Please Follow Request Tips
-🔆 Request Tips › [<a href="https://telegram.me/HeroFlixx/2">Click Here</a>]</i></b>"""
 
-    MVE_NT_FND = """<b><i>💢 404 Error / No Results❗
 
-🚫 The Reason❓[<a href="https://telegram.me/HeroFlixx/3">Click Here</a>]
-🗨 Please Follow Request Tips
-🔆 Request Tips › [<a href="https://telegram.me/HeroFlixx/2">Click Here</a>]</i></b>"""
+    I_CUD_NT = """<b><i>💢 Sorry - It's Not Available❗️
+
+⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]
+🗨 Please Follow Request Tips!!!
+⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>"""
+
+    MVE_NT_FND = """<b><i>💢 Sorry - It's Not Available❗️
+
+⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]
+🗨 Please Follow Request Tips!!!
+⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>"""
 
     TOP_ALRT_MSG = """🔆彡[ @HEROFLiX ]彡🔆"""
 
