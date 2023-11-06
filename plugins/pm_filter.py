@@ -227,7 +227,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit("<b><i>💢 Sorry - It's Not Available❗️\n\n⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]\n🗨 Please Follow Request Tips!!!/n⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>")
+            k = await query.message.edit('<b><i>💢 Sorry, It Is Not Available❗️\n\n⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]\n🗨 Please Follow Request Tips!!!/n⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2'>Click Here</a>]</i></b>")
             await asyncio.sleep(60)
             await k.delete()
 
@@ -1813,7 +1813,7 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = query.replace(" ", "+")
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply("<b><i><b><i>💢 Sorry - It's Not Available❗️\n\n⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]\n🗨 Please Follow Request Tips!!!/n⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>")
+        k = await msg.reply('<b><i>💢 Sorry, It is Not Available❗️\n\n⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]\n🗨 Please Follow Request Tips!!!/n⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>')
         await asyncio.sleep(60)
         await k.delete()    
         return
