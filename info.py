@@ -20,7 +20,7 @@ DWLD = environ.get("DWLD", 'HeroFlixx/8')
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
-PICS = (environ.get('PICS', 'https://te.legra.ph/file/4ba1cee40673773867d6c.jpg https://te.legra.ph/file/affa04a4727319b4f39e4.jpg https://te.legra.ph/file/61665414220a66fe5c816.jpg ')).split()
+PICS = (environ.get('PICS', 'https://te.legra.ph/file/c40b0234d833e13ea3b4c.jpg https://te.legra.ph/file/c40b0234d833e13ea3b4c.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/e709716b0b99ed944a533.jpg")
 MELCOW_PIC = environ.get("MELCOW_PIC", "https://graph.org/file/75d4fcc66598ea1ef4941.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/2d68d2c0fbf9385d48d70.jpg")
