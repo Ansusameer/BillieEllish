@@ -24,7 +24,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('❓How To Use Me❓', url=f'https://telegram.me/{DWLD}')
+                InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlixx/8')
             ]
                ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -40,7 +40,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('❓How To Use Me', url=f'https://telegram.me/{DWLD}'),
+            InlineKeyboardButton('❓How To Use Me', url=f'https://t.me/HeroFlixx/8'),
             InlineKeyboardButton('⚜ Updates', url='https://telegram.me/HeroFlix')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -81,7 +81,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('❓How To Use Me', url=f'https://telegram.me/{DWLD}'),
+            InlineKeyboardButton('❓How To Use Me', url=f'https://t.me/HeroFlixx/8'),
             InlineKeyboardButton('⚜ Updates', url='https://telegram.me/HeroFlix')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
@@ -263,7 +263,7 @@ async def start(client, message):
                     [
                         InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                     ], [
-                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://telegram.me/{DWLD}')
+                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://t.me/HeroFlixx/8')
                     ]
                 ]
             )
@@ -281,7 +281,7 @@ async def start(client, message):
             file_id = file.file_id
             files_ = await get_file_details(file_id)
             files1 = files_[0]
-            title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))
+            title = ' '.join(filter(lambda x: not x.startswith('www.') and not x.startswith('@'), files1.file_name.split()))
             size=get_size(files1.file_size)
             f_caption=files1.caption
             if CUSTOM_FILE_CAPTION:
@@ -291,12 +291,12 @@ async def start(client, message):
                     logger.exception(e)
                     f_caption=f_caption
             if f_caption is None:
-                f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
+                f_caption = f"{' '.join(filter(lambda x: not x.startswith('www.') and not x.startswith('@'), files1.file_name.split()))}"
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
                     InlineKeyboardButton("♻️Vᴇʀɪғʏ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ],[
-                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://telegram.me/{DWLD}')
+                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/HeroFlixx/8')
                   ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -337,7 +337,7 @@ async def start(client, message):
                         [
                             InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                         ], [
-                            InlineKeyboardButton('❓ How To Download ❓', url=f"https://telegram.me/{DWLD}")
+                            InlineKeyboardButton('❓ How To Download ❓', url=f"https://t.me/HeroFlixx/8")
                         ]
                     ]
                 )
@@ -354,7 +354,7 @@ async def start(client, message):
                 btn = [[
                     InlineKeyboardButton("♻️Vᴇʀɪғʏ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ],[
-                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://telegram.me/{DWLD}')
+                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/HeroFlixx/8')
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -376,7 +376,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '' + ' '.join(filter(lambda x: not x.startswith('www.') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -394,7 +394,7 @@ async def start(client, message):
             pass
         return await message.reply('No such file exist.')
     files = files_[0]
-    title = '' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    title = '' + ' '.join(filter(lambda x: not x.startswith('www.') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
@@ -404,7 +404,7 @@ async def start(client, message):
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
-        f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f"{' '.join(filter(lambda x: not x.startswith('www.') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
             InlineKeyboardButton("♻️Vᴇʀɪғʏ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
