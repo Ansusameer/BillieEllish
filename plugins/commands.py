@@ -24,7 +24,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlixx/8')
+                InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/{TUTORIAL}')
             ]
                ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -40,8 +40,8 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('❓How To Use Me', url=f'https://t.me/HeroFlixx/8'),
-            InlineKeyboardButton('⚜ Updates', url='https://telegram.me/HeroFlix')
+            InlineKeyboardButton('❓How To Use Me', url=f'https://t.me/{TUTORIAL}'),
+            InlineKeyboardButton('⚜ Updates', url='https://telegram.me/MiAFlix')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -69,9 +69,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("🔆彡⟨ HEROFLiX ⟩彡🔆", url=f"https://telegram.me/heroflix")])
+                btn.append([InlineKeyboardButton("🔆彡⟨ MiAFLiX ⟩彡🔆", url=f"https://telegram.me/MiAflix")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("🔆彡⟨ HEROFLiX ⟩彡🔆", url=f"https://telegram.me/heroflix")])
+                btn.append([InlineKeyboardButton("🔆彡⟨ MiAFLiX ⟩彡🔆", url=f"https://telegram.me/MiAflix")])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**🔆 Join Our Main Channel & Then Request Again in Group ♻ \n\n🔆 हमारे मैन चैनल से जुड़ें और फिर ग्रुप में दोबारा रिक्वेस्ट करें ♻**",
@@ -81,8 +81,8 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('❓How To Use Me', url=f'https://t.me/HeroFlixx/8'),
-            InlineKeyboardButton('⚜ Updates', url='https://telegram.me/HeroFlix')
+            InlineKeyboardButton('❓How To Use Me', url=f'https://t.me/{TUTORIAL}'),
+            InlineKeyboardButton('⚜ Updates', url='https://telegram.me/MiAFlix')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -133,7 +133,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🔆彡[ HEROFLiX ]彡🔆', url=f'https://telegram.me/heroflix'),
+                          InlineKeyboardButton('🔆彡[ MiAFLiX ]彡🔆', url=f'https://telegram.me/MiAflix'),
                          ]
                         ]
                     )
@@ -149,7 +149,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🔆彡[ HEROFLiX ]彡🔆', url=f'https://telegram.me/heroflix'),
+                          InlineKeyboardButton('🔆彡[ MiAFLiX ]彡🔆', url=f'https://telegram.me/MiAflix'),
                          ]
                         ]
                     )
@@ -242,7 +242,7 @@ async def start(client, message):
                     [
                         InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                     ], [
-                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://telegram.me/{DWLD}')
+                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://telegram.me/{TUTORIAL}')
                     ]
                 ]
             )
@@ -258,12 +258,12 @@ async def start(client, message):
         files_ = await get_file_details(file_id)
         files = files_[0]
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-        k = await client.send_message(chat_id=user,text=f'<b>📙 File ➠ [ {get_size(files.file_size)} ] <a href="https://telegram.me/HEROFLiX">{files.file_name}</a> \n\n📗 Download Link ➠ {g}</b>', reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=user,text=f'<b>📙 File ➠ [ {get_size(files.file_size)} ] {files.file_name} \n\n📗 Download Link ➠ {g}</b>', reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                     ], [
-                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://t.me/HeroFlixx/8')
+                        InlineKeyboardButton('❓ How To Download ❓', url=f'https://t.me/{TUTORIAL}')
                     ]
                 ]
             )
@@ -296,7 +296,7 @@ async def start(client, message):
                 btn = [[
                     InlineKeyboardButton("♻️Vᴇʀɪғʏ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ],[
-                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/HeroFlixx/8')
+                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/{TUTORIAL}')
                   ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -312,7 +312,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🔆彡[ HEROFLiX ]彡🔆', url=f'https://telegram.me/heroflix'),
+                      InlineKeyboardButton('🔆彡[ MiAFLiX ]彡🔆', url=f'https://telegram.me/MiAflix'),
                      ]
                     ]
                 )
@@ -332,12 +332,12 @@ async def start(client, message):
             files_ = await get_file_details(file_id)
             files = files_[0]
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f'<b>📙 File ➠ [ {get_size(files.file_size)} ] <a href="https://telegram.me/HEROFLiX">{files.file_name}</a> \n\n📗 Download Link ➠ {g}</b>', reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f'<b>📙 File ➠ [ {get_size(files.file_size)} ] {files.file_name} \n\n📗 Download Link ➠ {g}</b>', reply_markup=InlineKeyboardMarkup(
                 [
                         [
                             InlineKeyboardButton('♻️ Download Link ♻️', url=g)
                         ], [
-                            InlineKeyboardButton('❓ How To Download ❓', url=f"https://t.me/HeroFlixx/8")
+                            InlineKeyboardButton('❓ How To Download ❓', url=f"https://t.me/{TUTORIAL}")
                         ]
                     ]
                 )
@@ -354,7 +354,7 @@ async def start(client, message):
                 btn = [[
                     InlineKeyboardButton("♻️Vᴇʀɪғʏ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ],[
-                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/HeroFlixx/8')
+                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://t.me/{TUTORIAL}')
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -369,7 +369,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🔆彡[ HEROFLiX ]彡🔆', url=f'https://telegram.me/heroflix'),
+                      InlineKeyboardButton('🔆彡[ MiAFLiX ]彡🔆', url=f'https://telegram.me/MiAflix'),
                      ]
                     ]
                 )
@@ -409,7 +409,7 @@ async def start(client, message):
         btn = [[
             InlineKeyboardButton("♻️Vᴇʀɪғʏ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ],[
-                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://telegram.me/{DWLD}')
+                    InlineKeyboardButton("⁉️Hᴏᴡ Tᴏ Vᴇʀɪғʏ⁉️", url=f'https://telegram.me/{TUTORIAL}')
         ]]
         await message.reply_text(
             text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -425,7 +425,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🔆彡[ HEROFLiX ]彡🔆', url=f'https://telegram.me/heroflix'),
+              InlineKeyboardButton('🔆彡[ MiAFLiX ]彡🔆', url=f'https://telegram.me/MiAflix'),
              ]
             ]
         )
