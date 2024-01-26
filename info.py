@@ -12,16 +12,15 @@ def is_enabled(value, default):
         return default
 
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '27096551'))
-API_HASH = environ.get('API_HASH', '8600379efa072b446f9bc81da4f40786')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5782574416:AAFbyyAuosSz1qjh3ARQTKlLe8wSMQOwLog')
+API_ID = int(environ.get('API_ID', '1736204'))
+API_HASH = environ.get('API_HASH', '890d40e0f91a4de32dec2965444b2cbe')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6159823074:AAHOtOeW-CLPtM70xapO0mjlIB7NzH_04yA')
 
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Heroflix:Heroflix@heroflix.6sgi15o.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Ariana")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Ariana')
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://forward:forward@forward.7rkvx.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Anurag")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Anurag_files')
-
-DWLD = environ.get("DWLD", 'MiaFlix/15')
+DWLD = environ.get("DWLD", 'HeroFlixx/8')
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
@@ -32,12 +31,12 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/2d68d2c0fbf9385d4
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1058015838').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001855514451').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001725696043').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1058015838').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
-auth_channel = environ.get('AUTH_CHANNEL', '')
-auth_grp = environ.get('AUTH_GROUP', '-1001659058244')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001521700370')
+auth_grp = environ.get('AUTH_GROUP', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
@@ -49,21 +48,21 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '12d1df0a0f8e8cd03eb7d99bb79c51fcab5dac84')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'a1ddf276451591d96211177237d5b97ec1c04da1')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'easysky.in')
-SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '12d1df0a0f8e8cd03eb7d99bb79c51fcab5dac84')
+SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'a1ddf276451591d96211177237d5b97ec1c04da1')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MIAflix')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/MIAflix')
-TUTORIAL = environ.get('TUTORIAL', 'MiaFlix/15')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/heroflix')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/heroflix')
+TUTORIAL = environ.get('TUTORIAL', 'HeroFlixx/8')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001652564383'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'AriaiBot')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'herofeedbot')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
