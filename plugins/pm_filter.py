@@ -12,8 +12,7 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, TUTORIAL, REQST_CHANNEL, IS_TUTORIAL, LANGUAGES, SEASONS, SUPPORT_CHAT, PREMIUM_USER, DWLD
+from info import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -50,7 +49,7 @@ async def pm_text(bot, message):
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
          text=f"<b>🌟 Click Here For Any Movie, Series, Anime & More!!!👇 \n\n🌟 किसी भी मूवी, सीरीज, एनीमे और अधिक के लिए यहां क्लिक करें!!!👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎬 Click Here 🧤", url=f"https://telegram.me/+4KrMei8Ia4c4YzE1")]])
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎬 Click Here 🧤", url=f"https://telegram.me/heroflixofficial")]])
     )
 
 
@@ -227,7 +226,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/MiaFlix/18">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://telegram.me/MiaFlix/17">Click Here</a>]</i></b>')
+            k = await query.message.edit('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/HeroFlixx/3">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://telegram.me/HeroFlixx/2">Click Here</a>]</i></b>')
             await asyncio.sleep(60)
             await k.delete()
 
@@ -851,7 +850,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         reply_markup=InlineKeyboardMarkup(
                             [
                              [
-                          InlineKeyboardButton('🔆彡[ MiAFLiX ]彡🔆', url=f'https://telegram.me/MiAflix'),
+                          InlineKeyboardButton('🔆彡[ HEROFLiX ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                          ]
                             ]
                         )
@@ -941,7 +940,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                          InlineKeyboardButton('🔆彡[ MiAFLiX ]彡🔆', url=f'https://telegram.me/MiAflix'),
+                          InlineKeyboardButton('🔆彡[ HEROFLiX ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                          ]
                 ]
             )
@@ -1178,10 +1177,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('⤬ Jᴏɪɴ Oᴜʀ Mᴀɪɴ Gʀᴏᴜᴘ ⤬', url=f'https://telegram.me/MiAflix')
+                    InlineKeyboardButton('⤬ Jᴏɪɴ Oᴜʀ Mᴀɪɴ Gʀᴏᴜᴘ ⤬', url=f'https://telegram.me/{CHNL_LNK}')
                 ],[
-                    InlineKeyboardButton('🗡️ ᴜᴘᴅᴀᴛᴇ 🗡️', url="https://telegram.me/MiAflix"),
-                    InlineKeyboardButton('✨ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ✨', url="https://telegram.me/MiAflix")
+                    InlineKeyboardButton('🗡️ ᴜᴘᴅᴀᴛᴇ 🗡️', url=f'https://telegram.me/{CHNL_LNK}'),
+                    InlineKeyboardButton('✨ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ✨', url=f'https://telegram.me/{CHNL_LNK}')
                 ],[
                     InlineKeyboardButton('⚡ ʜᴇʟᴘ ⚡', callback_data='help'),
                     InlineKeyboardButton('🤝 ᴀʙᴏᴜᴛ 🤝', callback_data='about')
@@ -1264,7 +1263,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('⚔️ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url='https://telegram.me/MiAflix'),
+            InlineKeyboardButton('⚔️ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://telegram.me/{CHNL_LNK}'),
             InlineKeyboardButton('🗡️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ', callback_data='source')
         ],[
             InlineKeyboardButton('🛡️ Hᴏᴍᴇ', callback_data='start'),
@@ -1455,7 +1454,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("🏃🏻‍♂️ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("🤝ᴄᴏɴᴛᴀᴄᴛ", url="telegram.me/MiAflix")
+                    InlineKeyboardButton("🤝ᴄᴏɴᴛᴀᴄᴛ", url=f'telegram.me/{CHNL_LNK}')
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1567,7 +1566,7 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in", "series", "full", "horror", "thriller", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+            removes = ["in", "series", "full", "horror", "thriller", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "web", "episodes", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
             for x in find:
                 # if x == "in" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
@@ -1799,7 +1798,7 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in", "series", "download", "full", "horror", "hd", "thriller", "and", "&", "hollywood", "session", "bollywood", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+    removes = ["in", "series", "download", "full", "horror", "hd", "thriller", "and", "&", "hollywood", "session", "bollywood", "web", "episodes", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
     for x in find:
         if x in removes:
             continue
@@ -1814,7 +1813,7 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = query.replace(" ", "+")
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/MiaFlix/18">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://telegram.me/MiaFlix/17">Click Here</a>]</i></b>')
+        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/HeroFlixx/3">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://telegram.me/HeroFlixx/2">Click Here</a>]</i></b>')
         await asyncio.sleep(60)
         await k.delete()    
         return
@@ -1845,7 +1844,7 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = query.replace(" ", "+")
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/MiaFlix/18">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://telegram.me/MiaFlix/17">Click Here</a>]</i></b>')
+        k = await msg.reply('<b><i>⚠ 404 Error, No Results❗ \n\n🚫 The Reason❓[<a href="https://telegram.me/HeroFlixx/3">Click Here</a>] \n📮 Please Follow Request Tips \n🔆 Request Tips › [<a href="https://telegram.me/HeroFlixx/2">Click Here</a>]</i></b>')
         await asyncio.sleep(60)
         await k.delete()    
         return
