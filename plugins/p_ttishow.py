@@ -1,7 +1,7 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS, MELCOW_PIC, CHNL_LNK, GRP_LNK, DWLD
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS, MELCOW_PIC, CHNL_LNK, GRP_LNK, TUTORIAL
 from database.users_chats_db import db
 from database.ia_filterdb import Media
 from utils import get_size, temp, get_settings
@@ -37,7 +37,7 @@ async def save_group(bot, message):
             return
         buttons = [[
             InlineKeyboardButton('📲 Support 📲', url=f"https://telegram.me/{SUPPORT_CHAT}"),
-            InlineKeyboardButton('🔆 Updates 🔆', url='https://telegram.me/MiAFlix')
+            InlineKeyboardButton('🔆 Updates 🔆', url='https://telegram.me/{CHNL_LNK}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -57,7 +57,7 @@ async def save_group(bot, message):
                                                  caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
-                                                                           InlineKeyboardButton("❓How To Download❓", url=f'https://telegram.me/{DWLD}')
+                                                                           InlineKeyboardButton("❓How To Download❓", url=f'https://telegram.me/{TUTORIAL}')
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
