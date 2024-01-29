@@ -226,7 +226,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit(script.OLD_ALRT_TXT,disable_web_page_preview=True)
+            k = await query.message.edit(script.I_CUDNT,disable_web_page_preview=True)
             await asyncio.sleep(60)
             await k.delete()
 
@@ -1813,7 +1813,7 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = query.replace(" ", "+")
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply(script.OLD_ALRT_TXT,disable_web_page_preview=True)
+        k = await msg.reply(script.I_CUDNT,disable_web_page_preview=True)
         await asyncio.sleep(60)
         await k.delete()    
         return
@@ -1844,7 +1844,7 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = query.replace(" ", "+")
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply(script.OLD_ALRT_TXT, disable_web_page_preview=True)
+        k = await msg.reply(script.I_CUDNT, disable_web_page_preview=True)
         await asyncio.sleep(60)
         await k.delete()    
         return
