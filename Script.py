@@ -35,9 +35,7 @@ Nᴀᴍᴇ - {}"""
     ALRT_TXT = """🔆 Honey, It's Not For You❗
 🔆 हनी, ये तुम्हारे लिए नहीं है❗"""
 
-    OLD_ALRT_TXT = """ʜᴇʏ {},
-ʏᴏᴜ ᴀʀᴇ ᴜꜱɪɴɢ ᴏɴᴇ ᴏꜰ ᴍʏ ᴏʟᴅ ᴍᴇꜱꜱᴀɢᴇꜱ, 
-ᴘʟᴇᴀꜱᴇ ʀᴇQᴜᴇꜱᴛ ᴀɢᴀɪɴ."""
+    OLD_ALRT_TXT = """♻ Link Expired, Please Request in Group Again!"""
 
     CUDNT_FND = """<b>❗Enter Correct Name👇</b>
 <b>❗सही नाम दर्ज करें👇</b>"""
@@ -45,7 +43,7 @@ Nᴀᴍᴇ - {}"""
     I_CUDNT = """<b><i>💢 Sorry – It’s Not Available❗️
 
 ⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]
-🗨 Please Follow Request Tips!!!
+🗨 Please Follow Request Tips!
 ⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>"""
 
 
@@ -54,13 +52,13 @@ Nᴀᴍᴇ - {}"""
     I_CUD_NT = """<b><i>💢 Sorry – It’s Not Available❗️
 
 ⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]
-🗨 Please Follow Request Tips!!!
+🗨 Please Follow Request Tips!
 ⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>"""
 
     MVE_NT_FND = """<b><i>💢 Sorry – It’s Not Available❗️
 
 ⚠️ The Reason❓[<a href="https://t.me/HeroFlixx/3">Click Here</a>]
-🗨 Please Follow Request Tips!!!
+🗨 Please Follow Request Tips!
 ⚙️ Request Tips › [<a href="https://t.me/HeroFlixx/2">Click Here</a>]</i></b>"""
     TOP_ALRT_MSG = """🔆彡[ @HEROFLiX ]彡🔆"""
 
