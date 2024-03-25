@@ -48,9 +48,9 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'easysky.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'a1ddf276451591d96211177237d5b97ec1c04da1')
+SHORTLINK_API = environ.get('SHORTLINK_API', '8538016024111a0090a5474be6c9f8b2464cbe2e')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'easysky.in')
-SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'a1ddf276451591d96211177237d5b97ec1c04da1')
+SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '8538016024111a0090a5474be6c9f8b2464cbe2e')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
