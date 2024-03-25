@@ -83,6 +83,9 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
                 max_results = 10
             else:
                 max_results = int(MAX_B_TN)
+    #added 2 lines --shadow
+    query = re.sub(r'\bseason (\d+)\b', lambda x: f's{x.group(1).zfill(2)}', query, flags=re.IGNORECASE)
+    query = re.sub(r'\bepisode (\d+)\b', lambda x: f'e{x.group(1).zfill(2)}', query, flags=re.IGNORECASE)
     query = query.strip()
     #if filter:
         #better ?
