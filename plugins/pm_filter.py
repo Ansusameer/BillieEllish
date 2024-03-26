@@ -37,8 +37,13 @@ SPELL_CHECK = {}
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
-    if k is None:
+    print("Manual Filter Result:", k)
+    
+    if k == False:
         await auto_filter(client, message)
+    else:
+        print("Message passed manual filters. Not calling auto_filter.")
+
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
