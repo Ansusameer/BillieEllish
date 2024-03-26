@@ -36,10 +36,11 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-    # k = await manual_filters(client, message)
+    k = await manual_filters(client, message)
     
-    # if k is None or k == False:
-        await auto_filter(client, message)
+    if k is not None and k != False:
+        return
+    await auto_filter(client, message)
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
