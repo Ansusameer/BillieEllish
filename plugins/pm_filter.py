@@ -52,7 +52,6 @@ async def pm_text(bot, message):
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎬 Click Here 🧤", url=f"https://telegram.me/heroflixofficial")]])
     )
 
-
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
@@ -1566,7 +1565,7 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in", "series", "full", "horror", "thriller", "4k", "ott", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "web", "episodes", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+            removes = ["in", "series", "full", "horror", "thriller", "4k", "ott", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "web", "download", "movie", "film", "netflix", "dubbed", "link", "subtitles"]
             for x in find:
                 # if x == "in" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
@@ -1798,7 +1797,7 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in", "series", "download", "full", "horror", "hd", "thriller", "4k", "and", "&", "hollywood", "session", "bollywood", "web", "episodes", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+    removes = ["in", "series", "download", "full", "horror", "hd", "thriller", "4k", "and", "&", "hollywood", "session", "bollywood", "web", "episodes", "dub", "anime", "file" "movie", "film", "netflix", "dubbed", "link", "subtitles"]
     for x in find:
         if x in removes:
             continue
