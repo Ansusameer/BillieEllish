@@ -74,7 +74,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("🔆彡⟨ HEROFLiX ⟩彡🔆", url=invite_link.invite_link)])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**🔆 Join Our Main Channel & Then Request Again in Group ♻ \n\n🔆 हमारे मैन चैनल से जुड़ें और फिर ग्रुप में दोबारा रिक्वेस्ट करें ♻**",
+            text="**🔆 First Join Our Main Channel & Then Request Again in Group ♻ \n\n🔆 पहले हमारे मैन चैनल से जुड़ें और फिर ग्रुप में दोबारा रिक्वेस्ट करें ♻**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
