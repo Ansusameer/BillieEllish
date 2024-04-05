@@ -198,7 +198,7 @@ async def next_page(bot, query):
         # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
         cap = f"<b>🔆 Results For ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
         for file in files:
-            cap += f"<b>📙 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
+            cap += f"<b>📙 ➔ <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
     try:
         await query.message.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
@@ -1565,7 +1565,7 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in", "series", "full", "thriller", "4k", "ott", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "web", "download", "movie", "film", "netflix", "dubbed", "link", "subtitles"]
+            removes = ["in", "series", "thriller", "4k", "ott", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "web", "download", "movie", "film", "netflix", "dubbed", "link", "subtitles"]
             for x in find:
                 # if x == "in" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
@@ -1729,7 +1729,7 @@ async def auto_filter(client, msg, spoll=False):
         # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
         cap = f"<b>🔆 Results For ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
         for file in files:
-            cap += f"<b>📙 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
+            cap += f"<b>📙 ➔ <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
     # if imdb and imdb.get('poster'):
     #     try:
@@ -1799,7 +1799,7 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in", "series", "download", "full","hd", "thriller", "4k", "and", "&", "hollywood", "session", "bollywood", "web", "episodes", "dub", "anime", "file" "movie", "film", "netflix", "dubbed", "link", "subtitles"]
+    removes = ["in", "series", "download", "hd", "thriller", "4k", "and", "&", "hollywood", "session", "bollywood", "web", "episodes", "dub", "anime", "file" "movie", "film", "netflix", "dubbed", "link", "subtitles"]
     for x in find:
         if x in removes:
             continue
