@@ -20,7 +20,6 @@ from bs4 import BeautifulSoup
 import requests
 import aiohttp
 from shortzy import Shortzy
-import re
 import regex
 import http.client
 import json
@@ -847,12 +846,6 @@ async def extract_v2(text):
     text = re.sub(r'\bepisode (\d+)\b', lambda x: f'e{x.group(1).zfill(2)}', text, flags=re.IGNORECASE)
 
     text = ' '.join(['e' + word[2:] if word.startswith('e0') and word[2:].isdigit() and len(word) >= 4 else word for word in text.split()])
-
-    unwanted_words = ["full", "video", "videos", "movie", "movies", "series", "dubbed", "send", "file", "audio",
-                      "to", "language", "quality", "qua", "aud", "give", "files", "hd", "in", "dub", "review"]
-
-    unwanted_words_pattern = re.compile(r'\b(?:' + '|'.join(re.escape(word) for word in unwanted_words) + r')\b', flags=re.IGNORECASE)
-    text = unwanted_words_pattern.sub('', text)
 
     text = re.sub(r'\s+', ' ', text).strip()
 
