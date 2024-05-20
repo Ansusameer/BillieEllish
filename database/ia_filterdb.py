@@ -8,7 +8,7 @@ from umongo import Instance, Document, fields
 from motor.motor_asyncio import AsyncIOMotorClient
 from marshmallow.exceptions import ValidationError
 from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, USE_CAPTION_FILTER, MAX_B_TN
-from utils import get_settings, save_group_settings
+from utils import get_settings, save_group_settings,extract_v2
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -84,8 +84,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
             else:
                 max_results = int(MAX_B_TN)
     #added 2 lines --shadow
-    query = re.sub(r'\bseason (\d+)\b', lambda x: f's{x.group(1).zfill(2)}', query, flags=re.IGNORECASE)
-    query = re.sub(r'\bepisode (\d+)\b', lambda x: f'e{x.group(1).zfill(2)}', query, flags=re.IGNORECASE)
+    query = await extract_v2(query)
     query = query.strip()
     #if filter:
         #better ?
