@@ -20,6 +20,8 @@ from bs4 import BeautifulSoup
 import requests
 import aiohttp
 from shortzy import Shortzy
+import re
+import regex
 import http.client
 import json
 
@@ -820,3 +822,39 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                     ]
                 )
             )'''
+
+
+async def extract_v2(text): 
+    text = text.lower()
+    text = regex.sub(r'\p{So}', '', text)
+    text = re.sub(r"[@!$ _\-.+:*#⁓(),/?]", " ", text)
+
+    replacements = {
+        "session": "season", "hindi": "hin", "hindi": "eng", "tamil": "tam", "telugu": "tel"
+    }
+
+    replacement_pattern = re.compile(r"\b(?:session|hindi|hindi|tamil|telugu)\b")
+    text = replacement_pattern.sub(lambda match: replacements.get(match.group(0), match.group(0)), text)
+
+    text = re.sub(r's(\d+)e(\d+)', r's\1 e\2', text, flags=re.IGNORECASE)
+    text = re.sub(r's(\d+)e', r's\1 e', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bep(\d+)\b', r'e\1', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bep (\d)\b', r'e0\1', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bep (\d{2,})\b', r'e\1', text, flags=re.IGNORECASE)
+    text = re.sub(r'\be(\d)\b', r'e0\1', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bs(\d)\b', r's0\1', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bseason (\d+)\b', lambda x: f's{x.group(1).zfill(2)}', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bepisode (\d+)\b', lambda x: f'e{x.group(1).zfill(2)}', text, flags=re.IGNORECASE)
+
+    text = ' '.join(['e' + word[2:] if word.startswith('e0') and word[2:].isdigit() and len(word) >= 4 else word for word in text.split()])
+
+    unwanted_words = ["full", "video", "videos", "movie", "movies", "series", "dubbed", "send", "file", "audio",
+                      "to", "language", "quality", "qua", "aud", "give", "files", "hd", "in", "dub", "review"]
+
+    unwanted_words_pattern = re.compile(r'\b(?:' + '|'.join(re.escape(word) for word in unwanted_words) + r')\b', flags=re.IGNORECASE)
+    text = unwanted_words_pattern.sub('', text)
+
+    text = re.sub(r'\s+', ' ', text).strip()
+
+    text = re.sub(r's(\d{2}) e(\d{2})', r's\1e\2', text, flags=re.IGNORECASE)
+    
