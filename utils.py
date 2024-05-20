@@ -850,4 +850,5 @@ async def extract_v2(text):
     text = re.sub(r'\s+', ' ', text).strip()
 
     text = re.sub(r's(\d{2}) e(\d{2})', r's\1e\2', text, flags=re.IGNORECASE)
+    return text
     
