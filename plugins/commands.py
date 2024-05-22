@@ -327,6 +327,7 @@ async def start(client, message):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
             await message.reply_text(text="<b>Link Expired, Search Again in Group!</b>")
+            return
         else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
