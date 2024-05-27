@@ -828,13 +828,7 @@ async def extract_v2(text):
     text = regex.sub(r'\p{So}', '', text)
     text = re.sub(r"[@!$ _\-.+:*#⁓(),/?]", " ", text)
 
-    replacements = {
-        "session": "season", "hindi": "hin", "hindi": "eng", "tamil": "tam", "telugu": "tel"
-    }
-
-    replacement_pattern = re.compile(r"\b(?:session|hindi|hindi|tamil|telugu)\b")
-    text = replacement_pattern.sub(lambda match: replacements.get(match.group(0), match.group(0)), text)
-
+    
     text = re.sub(r's(\d+)e(\d+)', r's\1 e\2', text, flags=re.IGNORECASE)
     text = re.sub(r's(\d+)e', r's\1 e', text, flags=re.IGNORECASE)
     text = re.sub(r'\bep(\d+)\b', r'e\1', text, flags=re.IGNORECASE)
