@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '1736204'))
 API_HASH = environ.get('API_HASH', '890d40e0f91a4de32dec2965444b2cbe')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6159823074:AAHOtOeW-CLPtM70xapO0mjlIB7NzH_04yA')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6159823074:AAEUgLsUdv_WR2zn0C7yLJHhZ6aZx_L9S18')
 
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Heroflix:Heroflix@heroflix.6sgi15o.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Ariana")
