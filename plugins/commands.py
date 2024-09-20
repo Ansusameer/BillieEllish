@@ -69,9 +69,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("🔆彡⟨ HEROFLiX ⟩彡🔆", url=invite_link.invite_link)])
+                btn.append([InlineKeyboardButton("🔆彡[ AVAFLiX ]彡🔆", url=invite_link.invite_link)])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("🔆彡⟨ HEROFLiX ⟩彡🔆", url=invite_link.invite_link)])
+                btn.append([InlineKeyboardButton("🔆彡[ AVAFLiX ]彡🔆", url=invite_link.invite_link)])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**🔆 First Join Our Main Channel & Then Request Again in Group ♻ \n\n🔆 पहले हमारे मैन चैनल से जुड़ें और फिर ग्रुप में दोबारा रिक्वेस्ट करें ♻**",
@@ -133,7 +133,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🔆彡⟨ HEROFLiX ⟩彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
+                          InlineKeyboardButton('🔆彡[ AVAFLiX ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                          ]
                         ]
                     )
@@ -149,7 +149,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🔆彡⟨ HEROFLiX ⟩彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
+                          InlineKeyboardButton('🔆彡[ AVAFLiX ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                          ]
                         ]
                     )
@@ -314,7 +314,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🔆彡⟨ HEROFLiX ⟩彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
+                      InlineKeyboardButton('🔆彡[ AVAFLiX ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                      ]
                     ]
                 )
@@ -373,7 +373,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🔆彡⟨ HEROFLiX ⟩彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
+                      InlineKeyboardButton('🔆彡[ AVAFLiX ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                      ]
                     ]
                 )
@@ -429,7 +429,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🔆彡⟨ HEROFLiX ⟩彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
+              InlineKeyboardButton('🔆彡[ AVAFLiX ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
              ]
             ]
         )
