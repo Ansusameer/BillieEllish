@@ -849,7 +849,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         reply_markup=InlineKeyboardMarkup(
                             [
                              [
-                          InlineKeyboardButton('🔆彡[ theAvaflix ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
+                          InlineKeyboardButton('🔆彡[ AVAFLiX  ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                          ]
                             ]
                         )
@@ -939,7 +939,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                          InlineKeyboardButton('🔆彡[ theAvaflix ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
+                          InlineKeyboardButton('🔆彡[ AVAFLiX  ]彡🔆', url=f'https://telegram.me/{CHNL_LNK}'),
                          ]
                 ]
             )
