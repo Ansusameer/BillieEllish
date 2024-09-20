@@ -42,22 +42,22 @@ Nᴀᴍᴇ - {}"""
 
     I_CUDNT = """<b><i>💢 Sorry – It’s Not Available❗️
 
-⚠️ The Reason❓[<a href="https://telegram.me/theAvaflixx/3">Click Here</a>]
+⚠️ The Reason❓[<a href="https://telegram.me/theAvaflix/3">Click Here</a>]
 🗨 Please Follow Request Tips!
-🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflixx/2">Click Here</a>]</i></b>"""
+🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflix/2">Click Here</a>]</i></b>"""
 
 
     I_CUD_NT = """<b><i>💢 Sorry – It’s Not Available❗️
 
-⚠️ The Reason❓[<a href="https://telegram.me/theAvaflixx/3">Click Here</a>]
+⚠️ The Reason❓[<a href="https://telegram.me/theAvaflix/3">Click Here</a>]
 🗨 Please Follow Request Tips!
-🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflixx/2">Click Here</a>]</i></b>"""
+🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflix/2">Click Here</a>]</i></b>"""
 
     MVE_NT_FND = """<b><i>💢 Sorry – It’s Not Available❗️
 
-⚠️ The Reason❓[<a href="https://telegram.me/theAvaflixx/3">Click Here</a>]
+⚠️ The Reason❓[<a href="https://telegram.me/theAvaflix/3">Click Here</a>]
 🗨 Please Follow Request Tips!
-🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflixx/2">Click Here</a>]</i></b>"""
+🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflix/2">Click Here</a>]</i></b>"""
 
     TOP_ALRT_MSG = """🔆彡[ @theAvaflix ]彡🔆"""
 
