@@ -67,6 +67,19 @@ async def is_subscribed(bot, query):
 
     return False
 
+async def search_gagala(text):
+    usr_agent = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+        'Chrome/61.0.3163.100 Safari/537.36'
+        }
+    text = text.replace(" ", '+')
+    url = f'https://www.google.com/search?q={text}'
+    response = requests.get(url, headers=usr_agent)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, 'html.parser')
+    titles = soup.find_all( 'h3' )
+    return [title.getText() for title in titles]
+
 async def get_poster(query, bulk=False, id=False, file=None):
     if not id:
         # https://t.me/GetTGLink/4183
@@ -181,19 +194,6 @@ async def broadcast_messages_group(chat_id, message):
         return await broadcast_messages_group(chat_id, message)
     except Exception as e:
         return False, "Error"
-    
-async def search_gagala(text):
-    usr_agent = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-        'Chrome/61.0.3163.100 Safari/537.36'
-        }
-    text = text.replace(" ", '+')
-    url = f'https://www.google.com/search?q={text}'
-    response = requests.get(url, headers=usr_agent)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, 'html.parser')
-    titles = soup.find_all( 'h3' )
-    return [title.getText() for title in titles]
 
 async def get_settings(group_id):
     settings = temp.SETTINGS.get(group_id)
@@ -773,7 +773,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/theAvaflix")
+                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/heroflix")
                                 ]
                             ]
                         )
@@ -816,7 +816,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                         InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                         InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                     ],[
-                        InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/theAvaflix")
+                        InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/heroflix")
                         ]
                     ]
                 )
