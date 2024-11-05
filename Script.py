@@ -44,26 +44,26 @@ Nᴀᴍᴇ - {}"""
 
 ⚠️ The Reason❓[<a href="https://telegram.me/theAvaflix/3">Click Here</a>]
 🗨 Please Follow Request Tips!
-🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflix/2">Click Here</a>]</i></b>"""
+🔆 Request Tips ➔ [<a href="https://t.me/Avaflixx/7">Click Here</a>]</i></b>"""
 
 
     I_CUD_NT = """<b><i>💢 Sorry – It’s Not Available❗️
 
-⚠️ The Reason❓[<a href="https://telegram.me/theAvaflix/3">Click Here</a>]
+⚠️ The Reason❓[<a href="https://t.me/Avaflixx/8">Click Here</a>]
 🗨 Please Follow Request Tips!
-🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflix/2">Click Here</a>]</i></b>"""
+🔆 Request Tips ➔ [<a href="https://t.me/Avaflixx/7">Click Here</a>]</i></b>"""
 
     MVE_NT_FND = """<b><i>💢 Sorry – It’s Not Available❗️
 
-⚠️ The Reason❓[<a href="https://telegram.me/theAvaflix/3">Click Here</a>]
+⚠️ The Reason❓[<a href="https://t.me/Avaflixx/8">Click Here</a>]
 🗨 Please Follow Request Tips!
-🔆 Request Tips ➔ [<a href="https://telegram.me/theAvaflix/2">Click Here</a>]</i></b>"""
+🔆 Request Tips ➔ [<a href="https://t.me/Avaflixx/7">Click Here</a>]</i></b>"""
 
     TOP_ALRT_MSG = """🔆彡[ @theAvaflix ]彡🔆"""
 
-    MELCOW_ENG = """<b><i>🔆 "theAvaflix • GROUP" 亗 🔆
+    MELCOW_ENG = """<b><i>🔆 "AVAFLiX • GROUP" 亗 🔆
 •───────────────────• 
-⚜Hey {}, Welcome To theAvaflix • Group. You Can Request Any Movies, Web-Series, Anime, K-Dramas, Animation etc., here....</i></b>"""
+⚜Hey {}, Welcome To AVAFLIX • Group. You Can Request Any Movies, Web-Series, Anime, K-Dramas, Animation etc., here....</i></b>"""
 
     SHORTLINK_INFO = """🔆彡[ @theAvaflix ]彡🔆"""
 
