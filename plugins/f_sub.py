@@ -16,15 +16,11 @@ TEXT = """
 async def is_not_subscribed(client, message):
     if message.text.startswith('/'): 
         buttons = [[
-            InlineKeyboardButton(text="🏮Main Channel ⟨Click Here⟩", url="https://t.me/+eP4R_u-ZXeIyZTY1")
-        ] , [
             InlineKeyboardButton(text="🔆彡⟨ AVAFLiX ⟩彡🔆" , url="https://t.me/AvaflixOfficial")
         ]]
         await message.reply_text(text=TEXT, reply_markup=InlineKeyboardMarkup(buttons))
     elif message.text:
         buttons = [[
-            InlineKeyboardButton(text="🏮Main Channel ⟨Click Here⟩" , url="https://t.me/+eP4R_u-ZXeIyZTY1")
-        ] , [
             InlineKeyboardButton(text="🔆彡⟨ AVAFLiX ⟩彡🔆" , url="https://t.me/AvaflixOfficial")
         ]]
         await message.reply_text(text=TEXT , reply_markup=InlineKeyboardMarkup(buttons))
