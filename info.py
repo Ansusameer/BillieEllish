@@ -19,7 +19,6 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '')
 DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
-F_SUB = environ.get("F_SUB", "AvaflixOfficial") 
 
 DWLD = environ.get("DWLD", '')
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
