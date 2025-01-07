@@ -1,4 +1,4 @@
-git+https://github.com/KurimuzonAkuma/pyrogram
+pyrogram==2.0.106
 regex
 umongo
 tgcrypto
