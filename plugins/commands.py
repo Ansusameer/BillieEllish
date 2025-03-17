@@ -41,8 +41,8 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [[
             InlineKeyboardButton('❓How To Use Me', url=f'https://telegram.me/{TUTORIAL}'),
-            InlineKeyboardButton('⚜ Updates', url=f'https://telegram.me/{CHNL_LNK}')
-        ]]
+            InlineKeyboardButton('⚜ Updates', url=f'https://telegram.me/{CHNL_LNK}'),                                InlineKeyboardButton('🌟 Premium Membership 🌟', url=f'https://telegram.me/Avaflixx13'),
+               ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
